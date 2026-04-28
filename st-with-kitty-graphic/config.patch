@@ -1,0 +1,61 @@
+--- a/config.h
++++ b/config.h
+@@
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++static char *font = "JetBrainsMono Nerd Font Mono:pixelsize=12:antialias=true:autohint=true";
+@@
+-int allowwindowops = 0;
++int allowwindowops = 1;
+@@
+ static const char *colorname[] = {
+-	/* 8 normal colors */
+-	"black",
+-	"red3",
+-	"green3",
+-	"yellow3",
+-	"blue2",
+-	"magenta3",
+-	"cyan3",
+-	"gray90",
+-
+-	/* 8 bright colors */
+-	"gray50",
+-	"red",
+-	"green",
+-	"yellow",
+-	"#5c5cff",
+-	"magenta",
+-	"cyan",
+-	"white",
++	/* 8 normal colors */
++	"#282828", /* black */
++	"#cc241d", /* red */
++	"#98971a", /* green */
++	"#d79921", /* yellow */
++	"#458588", /* blue */
++	"#b16286", /* magenta */
++	"#689d6a", /* cyan */
++	"#a89984", /* white */
++
++	/* 8 bright colors */
++	"#928374", /* bright black */
++	"#fb4934", /* bright red */
++	"#b8bb26", /* bright green */
++	"#fabd2f", /* bright yellow */
++	"#83a598", /* bright blue */
++	"#d3869b", /* bright magenta */
++	"#8ec07c", /* bright cyan */
++	"#ebdbb2", /* bright white */
+@@
+-	"#cccccc",
+-	"#555555",
+-	"gray90", /* default foreground colour */
+-	"black", /* default background colour */
++	"#ebdbb2", /* default foreground */
++	"#3c3836", /* default background */
++	"#ebdbb2", /* default foreground colour */
++	"#1d2021", /* default background colour */
+ };
+@@
+-	{ TERMMOD,              Button2, showimageinfo,  {},            1 },
++	{ TERMMOD,              Button2, showimageinfo,  { .i = 0 },    1 },
